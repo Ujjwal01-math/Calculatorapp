@@ -1,5 +1,8 @@
 import streamlit as st
-import random
+st.set_page_config(
+    page_title="CalcXchange",
+    page_icon="🧮"      
+)
 name=st.sidebar.text_input("Enter your name")
 if name: 
     cc=st.sidebar.selectbox("Select the Operation",["None","Calculator","Currency converter"])
