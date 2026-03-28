@@ -28,7 +28,8 @@ if name:
     elif(cc=="Currency converter")  :
        st.title(f"Hello {name}")
        st.markdown("### Welcome to Currency Converter 🙏") 
-       a=st.selectbox("Select Currency",["Dollor","Euro","Yen","Ruble"])   
+        a=st.radio("Select Currency",["Dollor","Euro","Yen","Ruble"])
+       #a=st.selectbox("Select Currency",["Dollor","Euro","Yen","Ruble"])   
        b=st.number_input("Enter Amount",min_value=0,step=1)
        if(a=="Dollor"):
           st.write("Current rate is 93")
