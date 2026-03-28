@@ -7,7 +7,8 @@ if name:
        st.title(f"Hello {name}")
        st.markdown("### Welcome to the Calculator 🙏") 
        a=st.number_input("Enter first number",min_value=0,step=1)
-       sc=st.selectbox("Select operation",["None","+","-","*","%"])
+       sc = st.radio("Select operator", ['+', '-', '*', '%'],width=150, horizontal=True)
+       #sc=st.selectbox("Select operation",["None","+","-","*","%"])
        b=st.number_input("Enter second number",min_value=1,step=1)
        if(sc=="+"):
           c=a+b
