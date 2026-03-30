@@ -1,12 +1,15 @@
 import streamlit as st
 st.set_page_config(
     page_title="CalcXchange",
-    page_icon="🧮"      
+    page_icon="🧮",
+    layout="wide",
+    initial_sidebar_state = "expanded"
 )
 name=st.sidebar.text_input("Enter your name")
 if name: 
     cc=st.sidebar.selectbox("Select the Operation",["None","Calculator","Currency converter"])
     if(cc=="Calculator"):
+       st.snow()
        st.title(f"Hello {name}")
        st.markdown("### Welcome to the Calculator 🙏") 
        a=st.number_input("Enter first number",min_value=0,step=1)
@@ -29,6 +32,7 @@ if name:
     
        st.success(f"output = {c}")   
     elif(cc=="Currency converter")  :
+       st.balloons() 
        st.title(f"Hello {name}")
        st.markdown("### Welcome to Currency Converter 🙏") 
        a=st.radio("Select Currency",["Dollor","Euro","Yen","Ruble"])
